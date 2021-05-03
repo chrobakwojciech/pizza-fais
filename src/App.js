@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import { Container, Grid } from '@material-ui/core';
 import './App.css';
+import PizzaComponent from './PizzaComponent';
+import IngredientsComponent from './IngredientsComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth='false' disableGutters='true' className='background-app'>
+      <Grid container style={{ height: '100vh' }} direction="row" justify="center" spacing={0}>
+        <Grid item xs={8}>
+          <PizzaComponent/>
+        </Grid>
+        <Grid item xs={4}>
+          <IngredientsComponent/>
+        </Grid>
+      </Grid>
+    </Container>
+    
   );
 }
 
