@@ -1,0 +1,52 @@
+[
+    {
+        "index": 0,
+        "name": "Basil",
+        "img": "Basil.png"
+    },
+    {
+        "index": 1,
+        "name": "Chili",
+        "img": "Chili.png"
+    },
+    {
+        "index": 2,
+        "name": "Curry",
+        "img": "Curry.png"
+    },
+    {
+        "index": 3,
+        "name": "Garlic",
+        "img": "Garlic.png"
+    },
+    {
+        "index": 4,
+        "name": "Ginger",
+        "img": "Ginger.png"
+    },
+    {
+        "index": 5,
+        "name": "Jalapeno",
+        "img": "Jalapeno.png"
+    },
+    {
+        "index": 6,
+        "name": "Oregano",
+        "img": "Oregano.png"
+    },
+    {
+        "index": 7,
+        "name": "Parsley",
+        "img": "Parsley.png"
+    },
+    {
+        "index": 8,
+        "name": "Rosemary",
+        "img": "Rosemary.png"
+    },
+    {
+        "index": 9,
+        "name": "Thyme",
+        "img": "Thyme.png"
+    }
+]

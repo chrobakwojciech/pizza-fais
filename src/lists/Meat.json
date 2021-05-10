@@ -1,0 +1,102 @@
+[
+    {
+        "index": 0,
+        "name": "Ants",
+        "img": "Ants.png"
+    },
+    {
+        "index": 1,
+        "name": "Bacon",
+        "img": "Bacon.png"
+    },
+    {
+        "index": 2,
+        "name": "Beef",
+        "img": "Beef.png"
+    },
+    {
+        "index": 3,
+        "name": "Chicken",
+        "img": "Chicken.png"
+    },
+    {
+        "index": 4,
+        "name": "Chorizo",
+        "img": "Chorizo.png"
+    },
+    {
+        "index": 5,
+        "name": "Earthworm",
+        "img": "Earthworm.png"
+    },
+    {
+        "index": 6,
+        "name": "Egg",
+        "img": "Egg.png"
+    },
+    {
+        "index": 7,
+        "name": "Frog",
+        "img": "Frog.png"
+    },
+    {
+        "index": 8,
+        "name": "Grasshopper",
+        "img": "Grasshopper.png"
+    },
+    {
+        "index": 9,
+        "name": "Ham",
+        "img": "Ham.png"
+    },
+    {
+        "index": 10,
+        "name": "Kangaroo",
+        "img": "Kangaroo.png"
+    },
+    {
+        "index": 11,
+        "name": "Maggots",
+        "img": "Maggots.png"
+    },
+    {
+        "index": 12,
+        "name": "Minced",
+        "img": "Minced.png"
+    },
+    {
+        "index": 13,
+        "name": "Pepperoni",
+        "img": "Pepperoni.png"
+    },
+    {
+        "index": 14,
+        "name": "Pork",
+        "img": "Pork.png"
+    },
+    {
+        "index": 15,
+        "name": "Salami",
+        "img": "Salami.png"
+    },
+    {
+        "index": 16,
+        "name": "Sausage",
+        "img": "Sausage.png"
+    },
+    {
+        "index": 17,
+        "name": "Snake",
+        "img": "Snake.png"
+    },
+    {
+        "index": 18,
+        "name": "Tofu",
+        "img": "Tofu.png"
+    },
+    {
+        "index": 19,
+        "name": "VeganSausage",
+        "img": "VeganSausage.png"
+    }
+]

@@ -6,8 +6,10 @@
 }
 
 .pizza-desk {
-    width: 75%;
-    position: relative;
-    left: -80px;
-    top: -60px;
+    background: url('images/pizza.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.MuiAvatar-img {
+    width: initial !important;
 }

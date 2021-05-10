@@ -1,0 +1,57 @@
+[
+    {
+        "index": 0,
+        "name": "Anchovy",
+        "img": "Anchovy.png"
+    },
+    {
+        "index": 1,
+        "name": "BlueMussel",
+        "img": "BlueMussel.png"
+    },
+    {
+        "index": 2,
+        "name": "Caviar",
+        "img": "Caviar.png"
+    },
+    {
+        "index": 3,
+        "name": "Cockle",
+        "img": "Cockle.png"
+    },
+    {
+        "index": 4,
+        "name": "Crab",
+        "img": "Crab.png"
+    },
+    {
+        "index": 5,
+        "name": "Flounder",
+        "img": "Flounder.png"
+    },
+    {
+        "index": 6,
+        "name": "Lobster",
+        "img": "Lobster.png"
+    },
+    {
+        "index": 7,
+        "name": "Salmon",
+        "img": "Salmon.png"
+    },
+    {
+        "index": 8,
+        "name": "Shrimp",
+        "img": "Shrimp.png"
+    },
+    {
+        "index": 9,
+        "name": "Squid",
+        "img": "Squid.png"
+    },
+    {
+        "index": 10,
+        "name": "Tuna",
+        "img": "Tuna.png"
+    }
+]
