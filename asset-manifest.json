@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pizza-fais/static/css/main.f154d61e.chunk.css",
+    "main.js": "/pizza-fais/static/js/main.ea729c40.chunk.js",
+    "main.js.map": "/pizza-fais/static/js/main.ea729c40.chunk.js.map",
+    "runtime-main.js": "/pizza-fais/static/js/runtime-main.e2274718.js",
+    "runtime-main.js.map": "/pizza-fais/static/js/runtime-main.e2274718.js.map",
+    "static/js/2.2badfc5d.chunk.js": "/pizza-fais/static/js/2.2badfc5d.chunk.js",
+    "static/js/2.2badfc5d.chunk.js.map": "/pizza-fais/static/js/2.2badfc5d.chunk.js.map",
+    "static/js/3.217d14fc.chunk.js": "/pizza-fais/static/js/3.217d14fc.chunk.js",
+    "static/js/3.217d14fc.chunk.js.map": "/pizza-fais/static/js/3.217d14fc.chunk.js.map",
+    "index.html": "/pizza-fais/index.html",
+    "static/css/main.f154d61e.chunk.css.map": "/pizza-fais/static/css/main.f154d61e.chunk.css.map",
+    "static/js/2.2badfc5d.chunk.js.LICENSE.txt": "/pizza-fais/static/js/2.2badfc5d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/pizza-fais/static/media/pizza.9e6d9681.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2274718.js",
+    "static/js/2.2badfc5d.chunk.js",
+    "static/css/main.f154d61e.chunk.css",
+    "static/js/main.ea729c40.chunk.js"
+  ]
+}
