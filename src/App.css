@@ -5,11 +5,7 @@
     overflow: hidden;
 }
 
-.pizza-desk {
-    background: url('images/pizza.png');
-    height: 100vh;
-    background-repeat: no-repeat;
-}
+
 .MuiAvatar-img {
     width: initial !important;
 }

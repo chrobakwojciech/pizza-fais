@@ -4,10 +4,21 @@ import Ingredient from './Ingredient'
 import { PizzaContext } from '../context/PizzaContext'
 
 function PizzaComponent() {
-  const { addIngredient, ingredients } = useContext(PizzaContext);
+  
+  const {
+    ingredients,
+    pizzaImg,
+    changePizzaBackground  } = useContext(PizzaContext);
+
+    
+  const pizzaStyle = {
+    backgroundImage: `url('${process.env.PUBLIC_URL}/${pizzaImg}.png')`,
+    height: '100vh',
+    backgroundRepeat: 'no-repeat'
+  }
 
   return (
-    <div className='pizza-desk'>
+    <div style={pizzaStyle}>
       <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
           {ingredients.map(ingr => {
@@ -15,11 +26,6 @@ function PizzaComponent() {
               <Ingredient img={ingr}/>
             )
           })}
-          {/* <Ingredient img={`${process.env.PUBLIC_URL}/Icons/Vegetable/Small/Broccoli.png`} />
-          <Ingredient img={`${process.env.PUBLIC_URL}/Icons/Vegetable/Small/Onion.png`} />
-          <Ingredient img={`${process.env.PUBLIC_URL}/Icons/Vegetable/Small/Tomato.png`} />
-          <Ingredient img={`${process.env.PUBLIC_URL}/Icons/Vegetable/Small/Mushroom.png`} />
-          <Ingredient img={`${process.env.PUBLIC_URL}/Icons/Vegetable/Small/Zucchini.png`} /> */}
         </Layer>
       </Stage>
 
@@ -29,5 +35,3 @@ function PizzaComponent() {
 }
 
 export default PizzaComponent;
-
-
