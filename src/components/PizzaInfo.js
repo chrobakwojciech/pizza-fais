@@ -1,10 +1,17 @@
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Box} from '@material-ui/core'
 import React, {useContext} from 'react';
 import { PizzaContext } from '../context/PizzaContext'
+import Salami from '../presets/Salami.json';
 
 
 function PizzaInfo() {
-  const {changePizzaBackground} = useContext(PizzaContext);
+  const pizzaPreset = {
+    salami: Salami,
+    capricciosa: [],
+    hawai: []
+  };
+
+  const {changePizzaBackground, setPresetPizza} = useContext(PizzaContext);
 
   const [pizzaSize, setPizzaSize] = React.useState('32');
   const handlePizzaSizeChange = (event) => {
@@ -14,6 +21,8 @@ function PizzaInfo() {
   const [preset, setPreset] = React.useState('none');
   const handlePresetChange = (event) => {
     if (event.target.value !== 'none') {
+      console.log(pizzaPreset[event.target.value])
+      setPresetPizza(pizzaPreset[event.target.value])
       setParts('1');
       changePizzaBackground('1');
     }
@@ -54,9 +63,9 @@ function PizzaInfo() {
             <FormLabel component="legend">Gotowe kompozycje</FormLabel>
             <RadioGroup value={preset} onChange={handlePresetChange}>
               <FormControlLabel value="none" control={<Radio />} label="Własna" />
-              <FormControlLabel value="capricciosa" control={<Radio />} label="Capricciosa" />
               <FormControlLabel value="salami" control={<Radio />} label="Salami" />
-              <FormControlLabel value="hawai" control={<Radio />} label="Hawajska" />
+              <FormControlLabel disabled value="capricciosa" control={<Radio />} label="Capricciosa" />
+              <FormControlLabel disabled value="hawai" control={<Radio />} label="Hawajska" />
             </RadioGroup>
           </FormControl>  
         </Box>

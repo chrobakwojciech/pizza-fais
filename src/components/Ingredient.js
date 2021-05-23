@@ -10,8 +10,8 @@ export default function Ingredient({ingr}) {
 
   const [state, setState] = React.useState({
     isDragging: false,
-    x: 350,
-    y: 350
+    x: ingr.x || 350,
+    y: ingr.y || 350
   });
 
   return (

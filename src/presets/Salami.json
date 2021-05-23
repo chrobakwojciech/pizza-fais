@@ -1,0 +1,269 @@
+[
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 100,
+        "y": 350
+    },
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 550,
+        "y": 350
+    },
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 320,
+        "y": 150
+    },
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 350,
+        "y": 600
+    },
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 150,
+        "y": 550
+    },
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 150,
+        "y": 550
+    },
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 150,
+        "y": 200
+    },
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 470,
+        "y": 200
+    },
+    {
+        "type": "Cheese",
+        "name": "Parmesan",
+        "x": 470,
+        "y": 520
+    },
+
+
+
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 100,
+        "y": 350
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 550,
+        "y": 350
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 320,
+        "y": 150
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 350,
+        "y": 600
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 150,
+        "y": 550
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 150,
+        "y": 550
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 150,
+        "y": 200
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 470,
+        "y": 200
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 470,
+        "y": 520
+    },
+    {
+        "type": "Meat",
+        "name": "Salami",
+        "x": 350,
+        "y": 350
+    },
+
+
+    {
+        "type": "Meat",
+        "name": "Pepperoni",
+        "x": 300,
+        "y": 350
+    },
+    {
+        "type": "Meat",
+        "name": "Pepperoni",
+        "x": 500,
+        "y": 350
+    },
+    {
+        "type": "Meat",
+        "name": "Pepperoni",
+        "x": 100,
+        "y": 350
+    },
+    {
+        "type": "Meat",
+        "name": "Pepperoni",
+        "x": 300,
+        "y": 250
+    },
+    {
+        "type": "Meat",
+        "name": "Pepperoni",
+        "x": 300,
+        "y": 450
+    },
+    {
+        "type": "Meat",
+        "name": "Pepperoni",
+        "x": 400,
+        "y": 550
+    },
+
+
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 130,
+        "y": 350
+    },
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 550,
+        "y": 350
+    },
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 320,
+        "y": 150
+    },
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 350,
+        "y": 600
+    },
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 180,
+        "y": 520
+    },
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 180,
+        "y": 220
+    },
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 470,
+        "y": 200
+    },
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 470,
+        "y": 520
+    },
+    {
+        "type": "Vegetable",
+        "name": "Tomato",
+        "x": 350,
+        "y": 350
+    },
+
+
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 130,
+        "y": 350
+    },
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 550,
+        "y": 350
+    },
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 320,
+        "y": 150
+    },
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 350,
+        "y": 600
+    },
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 180,
+        "y": 520
+    },
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 180,
+        "y": 220
+    },
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 470,
+        "y": 200
+    },
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 470,
+        "y": 520
+    },
+    {
+        "type": "Cheese",
+        "name": "Gouda",
+        "x": 350,
+        "y": 350
+    }
+]

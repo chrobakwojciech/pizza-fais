@@ -17,20 +17,20 @@ const useStyles = makeStyles((theme) => ({
 
 
 function PizzaSummary() {
-  const {removeIngredient, ingredients} = useContext(PizzaContext);
+  const {removeIngredient, getUniqueIngredients} = useContext(PizzaContext);
 
   const classes = useStyles();
 
-  const remove = (id) => () => {
-    removeIngredient(id);
+  const remove = (type) => () => {
+    removeIngredient(type);
   }
   return (
     <Paper style={{maxHeight: '100vh', minWidth: '300px', overflow: 'auto'}}>
     <List className={classes.root}>
-      {ingredients.map((value) => {
+      {getUniqueIngredients().map((value) => {
         const labelId = `checkbox-list-label-${value}`;
         return (
-          <ListItem key={value.index} role={undefined} button onClick={remove(value.id)}>
+          <ListItem key={value.index} role={undefined} button onClick={remove(value.name)}>
               <ListItemAvatar>
               <Avatar
                 variant="square"
