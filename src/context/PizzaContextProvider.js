@@ -6,6 +6,10 @@ import { v4 as uuidv4 } from 'uuid';
 export default function PizzaContextProvider({children}) {
     const [ingredients, setIngredients] = useState([]);
     const [pizzaImg, setPizzaImg] = useState('pizza-1');
+    const [sauces, setSauces] = useState({
+        tomato: false,
+        garlic: false
+    });
 
     const addIngredient = (img, name, type, id, x, y) => {
         const ingr = {
@@ -22,7 +26,6 @@ export default function PizzaContextProvider({children}) {
     const removeIngredient = (name) => {
         const currentIngr = [...ingredients];
         const resIngr = currentIngr.filter(ingr => ingr.name !== name);
-        console.log(2, resIngr);
         setIngredients(resIngr);
     }
 
@@ -39,12 +42,10 @@ export default function PizzaContextProvider({children}) {
             }
         }
 
-        console.log(resIngredients);
         return resIngredients
     }
 
     const setPresetPizza = (preset) => {
-        console.log(preset)
         setIngredients([]);
         const newIngr = [];
         for (const ingredient of preset) {
@@ -58,9 +59,15 @@ export default function PizzaContextProvider({children}) {
             }
             newIngr.push(ingr);
         }
-        console.log(1, newIngr);
         setIngredients(newIngr)
     }
+
+    const [pizzaSize, setPizzaSize] = React.useState('32');
+
+    const getPrice = () => {
+        const saucesChecked = Object.values(sauces).filter(v => v === true);
+        return (pizzaSize - 5) + getUniqueIngredients().length * 2 + saucesChecked.length * 2;
+    };
 
     const value = {
         addIngredient,
@@ -69,7 +76,12 @@ export default function PizzaContextProvider({children}) {
         getUniqueIngredients,
         ingredients,
         pizzaImg,
-        changePizzaBackground
+        sauces, 
+        getPrice,
+        setSauces,
+        changePizzaBackground,
+        pizzaSize, 
+        setPizzaSize
     };
 
     return (

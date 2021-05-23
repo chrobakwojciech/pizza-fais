@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import {Tabs, Tab, Box, Typography, Divider} from '@material-ui/core';
@@ -12,9 +12,7 @@ import meat from '../lists/Meat.json';
 import spice from '../lists/Spice.json';
 import PizzaInfo from './PizzaInfo';
 import PizzaSummary from './PizzaSummary';
-
-import { PizzaContext } from '../context/PizzaContext'
-
+import PizzaPayment from './PizzaPayment';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,11 +65,6 @@ const useStyles = makeStyles((theme) => ({
 export default function RightMenu() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  
-  const {
-    ingredients,
-    pizzaImg,
-    changePizzaBackground  } = useContext(PizzaContext);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -126,7 +119,7 @@ export default function RightMenu() {
         <PizzaSummary/>
       </TabPanel>
       <TabPanel value={value} index={11}>
-        TODO
+        <PizzaPayment/>
       </TabPanel>
     </div>
   );

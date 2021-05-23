@@ -12,9 +12,8 @@ function PizzaInfo() {
     none: []
   };
 
-  const {changePizzaBackground, setPresetPizza} = useContext(PizzaContext);
+  const {changePizzaBackground, setPresetPizza, pizzaSize, setPizzaSize} = useContext(PizzaContext);
 
-  const [pizzaSize, setPizzaSize] = React.useState('32');
   const handlePizzaSizeChange = (event) => {
     setPizzaSize(event.target.value);
   }
@@ -40,7 +39,7 @@ function PizzaInfo() {
           <FormControl component="fieldset">
             <FormLabel component="legend">Rozmiar pizzy</FormLabel>
             <RadioGroup value={pizzaSize} onChange={handlePizzaSizeChange}>
-              <FormControlLabel value="29" control={<Radio />} label="Mała (29 cm)" />
+              <FormControlLabel value="21" control={<Radio />} label="Mała (21 cm)" />
               <FormControlLabel value="32" control={<Radio />} label="Średnia (32 cm)" />
               <FormControlLabel value="41" control={<Radio />} label="Duza (41 cm)" />
             </RadioGroup>
