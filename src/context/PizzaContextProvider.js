@@ -44,6 +44,7 @@ export default function PizzaContextProvider({children}) {
     }
 
     const setPresetPizza = (preset) => {
+        console.log(preset)
         setIngredients([]);
         const newIngr = [];
         for (const ingredient of preset) {

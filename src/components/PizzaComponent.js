@@ -8,7 +8,7 @@ function PizzaComponent() {
   const {
     ingredients,
     pizzaImg,
-    changePizzaBackground  } = useContext(PizzaContext);
+    changePizzaBackground } = useContext(PizzaContext);
 
     
   const pizzaStyle = {
@@ -28,9 +28,7 @@ function PizzaComponent() {
           })}
         </Layer>
       </Stage>
-
     </div>
-
   );
 }
 

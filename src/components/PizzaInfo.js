@@ -8,7 +8,8 @@ function PizzaInfo() {
   const pizzaPreset = {
     salami: Salami,
     capricciosa: [],
-    hawai: []
+    hawai: [],
+    none: []
   };
 
   const {changePizzaBackground, setPresetPizza} = useContext(PizzaContext);
@@ -20,12 +21,9 @@ function PizzaInfo() {
 
   const [preset, setPreset] = React.useState('none');
   const handlePresetChange = (event) => {
-    if (event.target.value !== 'none') {
-      console.log(pizzaPreset[event.target.value])
-      setPresetPizza(pizzaPreset[event.target.value])
-      setParts('1');
-      changePizzaBackground('1');
-    }
+    setPresetPizza(pizzaPreset[event.target.value])
+    setParts('1');
+    changePizzaBackground('1');
   
     setPreset(event.target.value);
   } 
