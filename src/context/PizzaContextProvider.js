@@ -5,9 +5,21 @@ export default function PizzaContextProvider({children}) {
     const [ingredients, setIngredients] = useState([]);
     const [pizzaImg, setPizzaImg] = useState('pizza-1');
 
-    const addIngredient = (ingredient) => {
-        setIngredients([...ingredients, ingredient])
+    const addIngredient = (img, name, type, id) => {
+        const ingr = {
+            img,
+            id,
+            type,
+            name
+        }
+        setIngredients([...ingredients, ingr])
     };
+
+    const removeIngredient = (id) => {
+        const currentIngr = [...ingredients];
+        const resIngr = currentIngr.filter(ingr => ingr.id !== id);
+        setIngredients(resIngr);
+    }
 
     const changePizzaBackground = (parts) => {
         setPizzaImg(`pizza-${parts}`)
@@ -15,6 +27,7 @@ export default function PizzaContextProvider({children}) {
 
     const value = {
         addIngredient,
+        removeIngredient,
         ingredients,
         pizzaImg,
         changePizzaBackground

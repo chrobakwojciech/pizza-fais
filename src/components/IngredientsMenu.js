@@ -8,6 +8,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
 import {ListItemAvatar, Avatar} from '@material-ui/core';
 import { PizzaContext } from '../context/PizzaContext';
+import { v4 as uuidv4 } from 'uuid';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,8 +27,9 @@ export default function IngredientsMenu({name, list}) {
   const classes = useStyles();
   const { addIngredient, ingredients } = useContext(PizzaContext);
 
-  const add = (value) => () => {
-    addIngredient(value)
+  const add = (img, name, type) => () => {
+    const id = uuidv4();
+    addIngredient(img, name, type, id)
   }
   
   return (
@@ -36,10 +39,9 @@ export default function IngredientsMenu({name, list}) {
         const labelId = `checkbox-list-label-${value}`;
 
         return (
-          <ListItem key={value.index} role={undefined} button onClick={add(`${process.env.PUBLIC_URL}/Icons/${name}/Small/${value.img}`)}>
+          <ListItem key={value.index} role={undefined} button onClick={add(`${process.env.PUBLIC_URL}/Icons/${name}/Small/${value.img}`, value.name, name)}>
               <ListItemAvatar>
               <Avatar
-                
                 variant="square"
                 className={classes.large}
                 imgProps={{width: '50%'}}

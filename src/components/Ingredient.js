@@ -4,8 +4,8 @@ import { dimensions } from '../imgDim'
 
 import useImage from 'use-image';
 
-export default function Ingredient({img}) {
-  const [image] = useImage(img);
+export default function Ingredient({ingr}) {
+  const [image] = useImage(ingr.img);
 
 
   const [state, setState] = React.useState({
@@ -18,8 +18,8 @@ export default function Ingredient({img}) {
     <Group draggable>
     <Image
       image={image}
-      x={state.x-(dimensions(img).width/2)}
-      y={state.y+(dimensions(img).height/2)}
+      x={state.x-(dimensions(image).width/2)}
+      y={state.y+(dimensions(image).height/2)}
     
       onDragStart={() => {
         setState({
@@ -58,8 +58,8 @@ export default function Ingredient({img}) {
 
     <Image
       image={image}
-      x={state.x+(dimensions(img).width/2)}
-      y={state.y+(dimensions(img).height/2)}
+      x={state.x+(dimensions(image).width/2)}
+      y={state.y+(dimensions(image).height/2)}
       onDragStart={() => {
         setState({
           ...state,

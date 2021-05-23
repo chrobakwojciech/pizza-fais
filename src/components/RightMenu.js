@@ -1,14 +1,8 @@
 import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider'
-
-import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio} from '@material-ui/core'
-import { Adjust, Receipt, Payment } from '@material-ui/icons';
+import {Tabs, Tab, Box, Typography, Divider} from '@material-ui/core';
+import { Adjust, Receipt, Payment, Home } from '@material-ui/icons';
 import IngredientsMenu from './IngredientsMenu';
 import vegetable from '../lists/Vegetable.json'
 import cheese from '../lists/Cheese.json';
@@ -16,6 +10,8 @@ import fish from '../lists/Fish.json';
 import fruit from '../lists/Fruit.json';
 import meat from '../lists/Meat.json';
 import spice from '../lists/Spice.json';
+import PizzaInfo from './PizzaInfo';
+import PizzaSummary from './PizzaSummary';
 
 import { PizzaContext } from '../context/PizzaContext'
 
@@ -64,26 +60,18 @@ const useStyles = makeStyles((theme) => ({
     borderRight: `1px solid ${theme.palette.divider}`,
   },
   item: {
-    padding: 0
+    padding: 2
   }
 }));
 
 export default function RightMenu() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
-  const [parts, setParts] = React.useState("1");
-
+  
   const {
     ingredients,
     pizzaImg,
     changePizzaBackground  } = useContext(PizzaContext);
-
-
-  const handleParts = (event) => {
-    setParts(event.target.value);
-    changePizzaBackground(event.target.value)
-  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -99,7 +87,8 @@ export default function RightMenu() {
         aria-label="Vertical tabs example"
         className={classes.tabs}
       >
-        <Tab icon={<Adjust />} label="Rozmiar" {...a11yProps(0)} />
+        <Tab icon={<Home />} label="Start" {...a11yProps(0)} />
+        <Divider />
         <Tab icon={<Adjust />} label="Warzywa" {...a11yProps(1)} />
         <Tab icon={<Adjust />} label="Ser" {...a11yProps(2)} />
         <Tab icon={<Adjust />} label="Mięso" {...a11yProps(3)} />
@@ -113,37 +102,30 @@ export default function RightMenu() {
       </Tabs>
 
       <TabPanel value={value} index={0}>
-      <FormControl component="fieldset">
-        <FormLabel component="legend">Podział pizzy</FormLabel>
-        <RadioGroup aria-label="gender" name="gender1" value={parts} onChange={handleParts}>
-          <FormControlLabel value="1" control={<Radio />} label="Całość" />
-          <FormControlLabel value="2" control={<Radio />} label="2 kawałki" />
-          <FormControlLabel value="4" control={<Radio />} label="4 kawałki" />
-        </RadioGroup>
-      </FormControl>  
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <IngredientsMenu name="Vegetable" list={vegetable} />
+        <PizzaInfo/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <IngredientsMenu name="Cheese" list={cheese} />
+        <IngredientsMenu name="Vegetable" list={vegetable} />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <IngredientsMenu name="Meat" list={meat} />
+        <IngredientsMenu name="Cheese" list={cheese} />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <IngredientsMenu name="Fish" list={fish} />
+        <IngredientsMenu name="Meat" list={meat} />
       </TabPanel>
       <TabPanel value={value} index={5}>
-        <IngredientsMenu name="Fruit" list={fruit} />
+        <IngredientsMenu name="Fish" list={fish} />
       </TabPanel>
       <TabPanel value={value} index={6}>
+        <IngredientsMenu name="Fruit" list={fruit} />
+      </TabPanel>
+      <TabPanel value={value} index={7}>
         <IngredientsMenu name="Spice" list={spice} />
       </TabPanel>
-      <TabPanel value={value} index={8}>
-        TODO
+      <TabPanel value={value} index={9}>
+        <PizzaSummary/>
       </TabPanel>
-      <TabPanel value={value} index={10}>
+      <TabPanel value={value} index={11}>
         TODO
       </TabPanel>
     </div>

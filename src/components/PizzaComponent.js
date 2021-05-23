@@ -23,7 +23,7 @@ function PizzaComponent() {
         <Layer>
           {ingredients.map(ingr => {
             return (
-              <Ingredient img={ingr}/>
+              <Ingredient ingr={ingr}/>
             )
           })}
         </Layer>
