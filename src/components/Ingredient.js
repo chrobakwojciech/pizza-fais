@@ -15,29 +15,8 @@ export default function Ingredient({ingr}) {
   });
 
   return (
-    <Group draggable>
     <Image
-      image={image}
-      x={state.x-(dimensions(image).width/2)}
-      y={state.y+(dimensions(image).height/2)}
-    
-      onDragStart={() => {
-        setState({
-          ...state,
-          isDragging: true
-        });
-      }}
-      onDragEnd={e => {
-        setState({
-          isDragging: false,
-          x: e.target.x(),
-          y: e.target.y()
-        });
-      }}
-    />
-
-
-    <Image
+      draggable
       image={image}
       x={state.x}
       y={state.y}
@@ -55,25 +34,5 @@ export default function Ingredient({ingr}) {
         });
       }}
     />
-
-    <Image
-      image={image}
-      x={state.x+(dimensions(image).width/2)}
-      y={state.y+(dimensions(image).height/2)}
-      onDragStart={() => {
-        setState({
-          ...state,
-          isDragging: true
-        });
-      }}
-      onDragEnd={e => {
-        setState({
-          isDragging: false,
-          x: e.target.x(),
-          y: e.target.y()
-        });
-      }}
-    />
-  </Group>
   )
 }

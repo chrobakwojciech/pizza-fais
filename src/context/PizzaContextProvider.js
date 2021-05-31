@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {PizzaContext} from "./PizzaContext";
 import { v4 as uuidv4 } from 'uuid';
+import { dimensions } from "../imgDim";
 
 
 export default function PizzaContextProvider({children}) {
@@ -24,9 +25,13 @@ export default function PizzaContextProvider({children}) {
     };
 
     const removeIngredient = (name) => {
+        setIngredients([])
         const currentIngr = [...ingredients];
-        const resIngr = currentIngr.filter(ingr => ingr.name !== name);
-        setIngredients(resIngr);
+
+        setTimeout(() => {
+            const resIngr = currentIngr.filter(ingr => ingr.name !== name);
+            setIngredients(resIngr);
+        }, 200);
     }
 
     const changePizzaBackground = (parts) => {
