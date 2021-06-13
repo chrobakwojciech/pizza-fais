@@ -50,7 +50,7 @@ export default function IngredientsMenu({name, list}) {
               />
             </ListItemAvatar>
             
-            <ListItemText id={labelId} primary={value.name} />
+            <ListItemText id={labelId} primary={`${value.name} (2 zł)`} />
           </ListItem>
         );
       })}

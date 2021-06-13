@@ -54,7 +54,7 @@ function PizzaSummary() {
               />
             </ListItemAvatar>
             
-            <ListItemText id={labelId} primary={value.name} />
+            <ListItemText id={labelId} primary={`${value.name} (2 zł)`} />
           </ListItem>
         );
       })}
@@ -69,11 +69,11 @@ function PizzaSummary() {
           <FormGroup>
             <FormControlLabel
               control={<Checkbox checked={garlic} onChange={handleSauceChange} name="garlic" />}
-              label="Czosnkowy"
+              label="Czosnkowy (2 zł)"
             />
             <FormControlLabel
               control={<Checkbox checked={tomato} onChange={handleSauceChange} name="tomato" />}
-              label="Pomidorowy"
+              label="Pomidorowy (2 zł)"
             />
           </FormGroup>
         </FormControl>
