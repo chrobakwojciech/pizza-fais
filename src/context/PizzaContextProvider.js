@@ -34,6 +34,12 @@ export default function PizzaContextProvider({children}) {
         }, 200);
     }
 
+    const setPosition = (id, x, y) => {
+        const ingrToEdit = ingredients.filter(i => i.id === id);
+        ingrToEdit[0].x = x
+        ingrToEdit[0].y = y;
+    }
+
     const changePizzaBackground = (parts) => {
         setPizzaImg(`pizza-${parts}`)
     }
@@ -86,7 +92,8 @@ export default function PizzaContextProvider({children}) {
         setSauces,
         changePizzaBackground,
         pizzaSize, 
-        setPizzaSize
+        setPizzaSize,
+        setPosition
     };
 
     return (

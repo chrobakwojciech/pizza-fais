@@ -38,11 +38,11 @@ function PizzaPayment() {
         </Box>
 
         {getUniqueIngredients().length > 0 ? 
-          <Button fullWidth variant="contained" color="primary">
+          <Button fullwidth={true} variant="contained" color="primary">
             Zapłać {getPrice()} zł
           </Button> 
           :
-          <Button fullWidth disabled variant="contained" color="primary">
+          <Button fullwidth={true} disabled variant="contained" color="primary">
             Zapłać
           </Button> 
           }

@@ -8,6 +8,7 @@ function PizzaComponent() {
   const {
     ingredients,
     pizzaImg,
+    setPosition,
     changePizzaBackground } = useContext(PizzaContext);
 
     
@@ -23,7 +24,7 @@ function PizzaComponent() {
         <Layer>
           {ingredients.map(ingr => {
             return (
-              <Ingredient ingr={ingr}/>
+              <Ingredient key={ingr.id} ingr={ingr} onPosChange={setPosition}/>
             )
           })}
         </Layer>

@@ -7,7 +7,7 @@ import PizzaContextProvider from './context/PizzaContextProvider';
 function App() {
   return (
     <PizzaContextProvider>
-      <Container maxWidth='false' disableGutters='true' className='background-app'>
+      <Container maxWidth={false} disableGutters={true} className='background-app'>
       <Grid container style={{ height: '100vh' }} direction="row" justify="center" spacing={0}>
         <Grid item xs={8}>
           <PizzaComponent/>

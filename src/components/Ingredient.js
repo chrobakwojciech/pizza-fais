@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {PizzaContext} from "../context/PizzaContext";
 import { Stage, Group, Rect, Circle, Text, Image } from 'react-konva';
 import { dimensions } from '../imgDim'
-
 import useImage from 'use-image';
 
-export default function Ingredient({ingr}) {
+export default function Ingredient({ingr, onPosChange}) {
   const [image] = useImage(ingr.img);
-
+  const { addIngredient, ingredients } = useContext(PizzaContext);
 
   const [state, setState] = React.useState({
     isDragging: false,
@@ -32,6 +32,7 @@ export default function Ingredient({ingr}) {
           x: e.target.x(),
           y: e.target.y()
         });
+        onPosChange(ingr.id, e.target.x(), e.target.y())
       }}
     />
   )
